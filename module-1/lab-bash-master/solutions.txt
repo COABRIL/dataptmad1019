@@ -1,1 +1,212 @@
-aqui tendría que hacer mis ejercicios
+cristina@ofalcala38:~$ cd 
+.cache/       Downloads/    ironhack/     .pki/         .ssh/
+.config/      Escritorio/   .local/       Plantillas/   .thunderbird/
+Descargas/    .gnupg/       .mozilla/     Público/      Vídeos/
+Documentos/   Imágenes/     Música/       snap/         
+
+cristina@ofalcala38:~$ cd ironhack/dataptmad1019/module-1/lab-bash-master/
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ echo "Hello World"
+Hello World
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ mkdir new_dir
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ rmdir new_dir
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ cp lorem/sed.txt lorem-copy
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ ls lorem
+at.txt  lorem.txt  sed.txt
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ cp lorem/at.txt lorem-copy ; cp lorem/lorem.txt lorem-copy 
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ cd lorem
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem$ cat sed.txt 
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem$ cat at.txt ; cat lorem.txt 
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellatLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem$ head cd lorem-copy
+head: no se puede abrir 'cd' para lectura: No existe el archivo o el directorio
+head: no se puede abrir 'lorem-copy' para lectura: No existe el archivo o el directorio
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem$ cd lorem-copy
+bash: cd: lorem-copy: No existe el archivo o el directorio
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem$ cd ..
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ lorem-copy/
+bash: lorem-copy/: Es un directorio
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ cd lorem-copy/
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy$ head -n3 sed.txt 
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy$ tail -n3 sed.txt 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy$sed -i '$a Homo homini lupus.' sed.txt 
+sed: no se puede leer archivosed: No existe el archivo o el directorio
+sed: no se puede leer $a Homo homini lupus.: No existe el archivo o el directorio
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy$ ls
+at.txt  lorem.txt  sed.txt
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy$ sed -i '$a Homo homini lupus.' sed.txt 
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy$ tail -n3 sed.txt 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+Aqui el texto que ira en la ultima linea
+Homo homini lupus.
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy$ sed -i 's/et/ET/g' at.txt 
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy$ echo $USER
+cristina
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy$ pwd
+/home/cristina/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy$ find *.txt
+at.txt
+lorem.txt
+sed.txt
+ | 
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy$ cd ..
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ find *.txt
+find: ‘*.txt’: No existe el archivo o el directorio
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ cd lorem
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem$ find *.txt
+at.txt
+lorem.txt
+sed.txt
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem$ wc -l sed.txt 
+8 sed.txt
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master/lorem$ pwd
+/home/cristina/ironhack/dataptmad1019/module-1/lab-bash-master/lorem
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ find -type f -name 'lorem*' | wc -l
+2
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ grep -r et lorem/at.txt 
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ grep -r "et" lorem/at.txt
+lorem/at.txt:At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+lorem/at.txt:deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+lorem/at.txt:provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+lorem/at.txt:Et harum quidem rerum facilis est et expedita distinctio. 
+lorem/at.txt:Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+lorem/at.txt:ut et voluptates repudiandae sint et molestiae non recusandae. 
+lorem/at.txt:Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ grep -r "et" .
+./README.md:Lets practice with `bash`, a programming language that executes in the command line!
+./README.md:## Setup
+./README.md:* Delete `new_dir` folder.
+./README.md:* Change every `et` to `ET` in `at.txt` located at lorem-copy (tip: use `sed`). 
+./README.md:* Find every appearance of `et` in `at.txt` located at lorem.
+./README.md:* Find every appearance of the **string** `et` in `at.txt` located at lorem. 
+./README.md:* Find every appearance of the **string** `et` located at the whole lab directory. 
+./README.md:Lets create the bash file: 
+./README.md:* Delete that folder. 
+./lorem-copy/lorem.txt:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+./lorem-copy/sed.txt:totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+./lorem-copy/sed.txt:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+./lorem-copy/sed.txt:sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+./lorem/lorem.txt:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+./lorem/at.txt:At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+./lorem/at.txt:deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+./lorem/at.txt:provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+./lorem/at.txt:Et harum quidem rerum facilis est et expedita distinctio. 
+./lorem/at.txt:Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+./lorem/at.txt:ut et voluptates repudiandae sint et molestiae non recusandae. 
+./lorem/at.txt:Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+./lorem/sed.txt:totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+./lorem/sed.txt:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+./lorem/sed.txt:sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ git status
+En la rama lab-bash-master
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+
+	lorem-copy/at.txt
+	lorem-copy/lorem.txt
+	lorem-copy/sed.txt
+
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ git add .
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ git commit -m 'bash-exercises'
+[lab-bash-master c56c8fa] bash-exercises
+ 3 files changed, 24 insertions(+)
+ create mode 100644 module-1/lab-bash-master/lorem-copy/at.txt
+ create mode 100644 module-1/lab-bash-master/lorem-copy/lorem.txt
+ create mode 100644 module-1/lab-bash-master/lorem-copy/sed.txt
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ git branch
+* lab-bash-master
+  lab-list-comprehensions
+  lab-resolving-git-conflicts
+  master
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ nano list_files.sh
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ bash list_files.sh 
+exercices  inputs  list_files.sh  lorem  lorem-copy  outputs  README.md  solutions.txt
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ git add .
+
+-----------------------------------------------------------------------
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ name=cristina
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ echo $name
+cristina
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ mkdir ${name}_folder
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ ls
+cristina_folder  exercices  inputs  list_files.sh  lorem  lorem-copy  outputs  README.md  solutions.txt
+
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ rmdir ${name}_folder
+cristina@ofalcala38:~/ironhack/dataptmad1019/module-1/lab-bash-master$ ls
+exercices  inputs  list_files.sh  lorem  lorem-copy  outputs  README.md  solutions.txt
+
