@@ -30,38 +30,36 @@ GROUP BY authors.au_id;
 
 
 /*Challenge 3:*/
-select sum (ytd_sales)
-from titles;
+select sum (qty)
+from sales;
 
-select authors.au_id AS 'AUTHOR ID', 
-au_lname AS 'LAST NAME', 
-au_fname AS 'FIRST NAME', 
-titles.title AS 'TITLE', publishers.pub_name AS'PUBLISHERS', sum(titles.ytd_sales) as 'SALES'
+select authors.au_id as 'AUTHOR ID',
+au_lname AS 'LAST NAME',
+au_fname AS 'FIRST NAME', sum(sales.qty) as 'TOTAL'
 from authors
 left JOIN titleauthor
 on titleauthor.au_id = authors.au_id
 left JOIN titles
 on titleauthor.title_id = titles.title_id
-left join publishers 
-on publishers.pub_id = titles.pub_id
+left join sales
+on sales.title_id = titles.title_id
 GROUP BY authors.au_id
-ORDER BY sum (titles.ytd_sales) DESC
+ORDER BY sum(sales.qty) DESC
 limit 3;
 
 
 /*Challenge 4:*/
-select authors.au_id AS 'AUTHOR ID', 
-au_lname AS 'LAST NAME', 
-au_fname AS 'FIRST NAME', 
-titles.title AS 'TITLE', publishers.pub_name AS'PUBLISHERS', sum(titles.ytd_sales) as 'SALES'
+select authors.au_id as 'AUTHOR ID',
+au_lname AS 'LAST NAME',
+au_fname AS 'FIRST NAME', sum(sales.qty) as 'TOTAL'
 from authors
 left JOIN titleauthor
 on titleauthor.au_id = authors.au_id
 left JOIN titles
 on titleauthor.title_id = titles.title_id
-left join publishers 
-on publishers.pub_id = titles.pub_id
+left join sales
+on sales.title_id = titles.title_id
 GROUP BY authors.au_id
-ORDER BY sum (titles.ytd_sales) DESC;
+ORDER BY sum(sales.qty) DESC;
 
 /*-------------------------------------------------------*/
