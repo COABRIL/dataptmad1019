@@ -1,11 +1,10 @@
 /*Challenge1:*/
-select count (au_id)
+select count ()
 FROM titleauthor;
 
 select authors.au_id AS 'AUTHOR ID', 
 au_lname AS 'LAST NAME', 
-au_fname AS 'FIRST NAME', 
-titles.title AS 'TITLE', publishers.pub_name AS'PUBLISHERS'
+au_fname AS 'FIRST NAME', titles.title AS 'TITLE', publishers.pub_name AS'PUBLISHERS'
 from authors
 JOIN titleauthor
 on titleauthor.au_id = authors.au_id
@@ -19,8 +18,7 @@ on publishers.pub_id = titles.pub_id;
 /*Challenge 2:*/
 select authors.au_id AS 'AUTHOR ID', 
 au_lname AS 'LAST NAME', 
-au_fname AS 'FIRST NAME', 
-titles.title AS 'TITLE', publishers.pub_name AS'PUBLISHERS', COUNT (title) as 'TITLE COUNT'
+au_fname AS 'FIRST NAME', publishers.pub_name AS'PUBLISHERS', COUNT (title) as 'TITLE COUNT'
 from authors
 left JOIN titleauthor
 on titleauthor.au_id = authors.au_id
