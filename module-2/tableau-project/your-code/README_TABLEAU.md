@@ -5,7 +5,7 @@ The purpose of this analysis is to know the profile of the users and the level o
 
 # Files
 
-No encontrarás el archivo en el repositorio ya que estos datos son confidenciales, pero sí encontrarás algunas imágenes que explican el análisis que hemos llevado a cabo.
+You will not find the file in the repository as this data is confidential, but you will find some images that explain the analysis we have carried out.
 
 ## Caracterización del usuario
 
